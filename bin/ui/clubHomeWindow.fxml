@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ClubHomeWindowController">
+   <children>
+      <VBox fx:id="leftVbox" prefHeight="688.0" prefWidth="350.0">
+         <children>
+            <HBox fx:id="leftTopHbox" prefHeight="100.0" prefWidth="350.0" style="-fx-background-color: #F7D54E;">
+               <children>
+                  <AnchorPane prefHeight="100.0" prefWidth="350.0">
+                     <children>
+                        <ImageView fx:id="appLogoImage" fitHeight="100.0" fitWidth="350.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../img/common/cricdexLogo.png" />
+                           </image></ImageView>
+                     </children>
+                  </AnchorPane>
+               </children></HBox>
+            <HBox fx:id="leftBottonHbox" layoutY="50.0" prefHeight="589.0" prefWidth="350.0" style="-fx-background-color: #3A225D;">
+               <children>
+                  <AnchorPane prefHeight="589.0" prefWidth="350.0">
+                     <children>
+                        <ImageView fx:id="clubLogoImage" fitHeight="322.0" fitWidth="322.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/logos/Kolkata_Knight_Riders.png" />
+                           </image></ImageView>
+                        <Label fx:id="slogan" alignment="CENTER" layoutX="1.0" layoutY="336.0" prefHeight="100.0" prefWidth="350.0" text="#SLOGAN" textFill="#f7d54e">
+                           <font>
+                              <Font name="Agency FB Bold" size="38.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buyPlayerButton" layoutX="95.0" layoutY="503.0" mnemonicParsing="false" onAction="#showTransferWindow" prefHeight="62.0" prefWidth="161.0" style="-fx-background-color: #F7D54E;" text="BUY PLAYERS" textFill="#3a225d">
+                           <font>
+                              <Font name="Agency FB" size="29.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="budgetLabel" alignment="CENTER" layoutY="433.0" prefHeight="45.0" prefWidth="188.0" text="REMANING BUDGET :" textFill="#f7d54e" visible="false">
+                           <font>
+                              <Font name="Agency FB" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="budgetValueLabel" layoutX="201.0" layoutY="433.0" prefHeight="45.0" prefWidth="150.0" text="\$50,000,000" textFill="#f7d54e" visible="false">
+                           <font>
+                              <Font name="Agency FB" size="22.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="midVbox" layoutX="350.0" prefHeight="688.0" prefWidth="641.0">
+         <children>
+            <HBox fx:id="midTopHbox" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #3A225D;">
+               <children>
+                  <Label fx:id="clubNameLabel" alignment="CENTER" prefHeight="100.0" prefWidth="641.0" text="KOLKATA KNIGHT RIDERS" textAlignment="CENTER" textFill="#f7d54e">
+                     <font>
+                        <Font name="Race Sport" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="playerListHbox" prefHeight="488.0" prefWidth="641.0" style="-fx-background-color: #3A225D;" />
+            <HBox fx:id="midBottomHbox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane prefHeight="100.0" prefWidth="641.0" style="-fx-background-color: #F7D54E;">
+                     <children>
+                        <TextField fx:id="searchByNameTextField" layoutX="41.0" layoutY="28.0" opacity="0.75" prefHeight="45.0" prefWidth="300.0" text="SEARCH PLAYERS BY NAME">
+                           <font>
+                              <Font name="Agency FB" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="resetPlayerNameButton" layoutX="500.0" layoutY="28.0" mnemonicParsing="false" onAction="#resetPlayerNameTextField" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: #3A225D;" text="CLEAR" textFill="#f7d54e">
+                           <font>
+                              <Font name="Agency FB" size="20.0" />
+                           </font></Button>
+                        <Button fx:id="searchByNameButton" layoutX="370.0" layoutY="28.0" mnemonicParsing="false" onAction="#searchPlayerByName" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: #3A225D;" text="SEARCH" textFill="#f7d54e">
+                           <font>
+                              <Font name="Agency FB" size="20.0" />
+                           </font></Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox fx:id="rightVbox" layoutX="991.0" prefHeight="688.0" prefWidth="375.0" style="-fx-background-color: #3A225D;">
+         <children>
+            <HBox fx:id="rightTopHbox" prefHeight="100.0" prefWidth="375.0" style="-fx-background-color: #F7D54E;">
+               <children>
+                  <AnchorPane prefHeight="100.0" prefWidth="375.0">
+                     <children>
+                        <MenuButton fx:id="menu" layoutX="249.0" layoutY="13.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="101.0" style="-fx-background-color: #3A225D;" text="MENU" textFill="#f7d54e">
+                           <font>
+                              <Font name="Agency FB" size="22.0" />
+                           </font>
+                           <items>
+                              <Menu fx:id="statsMenu" mnemonicParsing="false" text="STATS">
+                                <items>
+                                  <MenuItem fx:id="maxAgeMenuItem" mnemonicParsing="false" onAction="#listMaxAgePlayers" text="PLAYER(S) WITH MAX AGE" />
+                                    <MenuItem fx:id="maxHeightMenuItem" mnemonicParsing="false" onAction="#listMaxHeightPlayers" text="PLAYER(S) WITH MAX HEIGHT" />
+                                    <MenuItem fx:id="maxSalaryMenuItem" mnemonicParsing="false" onAction="#listMaxSalaryPlayers" text="PLAYER(S) WITH MAX SALARY" />
+                                    <MenuItem fx:id="yearlySalaryMenuItem" mnemonicParsing="false" onAction="#showTotalYearlySalary" text="TOTAL YEARLY SALARY" />
+                                </items>
+                              </Menu>
+                              <MenuItem fx:id="logoutMenuItem" mnemonicParsing="false" onAction="#logoutClub" text="LOGOUT" />
+                           </items>
+                        </MenuButton>
+                        <Label fx:id="refreshLabel" alignment="CENTER" layoutX="57.0" layoutY="14.0" prefHeight="24.0" prefWidth="123.0" text="REFRESH AFTER ... " visible="false">
+                           <font>
+                              <Font name="Agency FB" size="19.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="refreshChoiceBox" layoutX="44.0" layoutY="50.0" prefHeight="27.0" prefWidth="150.0" style="-fx-background-color: #3A225D;" visible="false" />
+                     </children>
+                  </AnchorPane>
+               </children></HBox>
+            <HBox fx:id="rightHbox2" prefHeight="50.0" prefWidth="375.0">
+               <children>
+                  <Label fx:id="searchFilterLabel" alignment="CENTER" prefHeight="50.0" prefWidth="375.0" style="-fx-font-style: #F7D54E;" text="SEARCH FILTERS" textAlignment="CENTER" textFill="#f7d54e">
+                     <font>
+                        <Font name="Agency FB" size="33.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox fx:id="rightHbox3" prefHeight="150.0" prefWidth="375.0">
+               <children>
+                  <AnchorPane prefHeight="150.0" prefWidth="375.0">
+                     <children>
+                        <Label fx:id="countryLabel" alignment="CENTER" layoutY="2.0" prefHeight="17.0" prefWidth="375.0" text="COUNTRY" textAlignment="CENTER" textFill="#f7d54e">
+                           <font>
+                              <Font name="Agency FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <TreeView fx:id="filterTreeCountry" layoutY="30.0" prefHeight="120.0" prefWidth="375.0" style="-fx-background-color: #F7D54E;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox fx:id="rightHbox4" prefHeight="150.0" prefWidth="375.0">
+               <children>
+                  <AnchorPane prefHeight="150.0" prefWidth="375.0">
+                     <children>
+                        <Label fx:id="positionLabel" alignment="CENTER" prefHeight="17.0" prefWidth="375.0" text="POSITION" textAlignment="CENTER" textFill="#f7d54e">
+                           <font>
+                              <Font name="Agency FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <TreeView fx:id="filterTreePosition" layoutY="30.0" prefHeight="120.0" prefWidth="375.0" style="-fx-background-color: #F7D54E;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox fx:id="rightHbox5" prefHeight="55.0" prefWidth="375.0">
+               <children>
+                  <AnchorPane prefHeight="55.0" prefWidth="375.0">
+                     <children>
+                        <Label fx:id="ageRangeLabel" alignment="CENTER" layoutY="16.0" prefHeight="24.0" prefWidth="109.0" text="AGE RANGE" textAlignment="CENTER" textFill="#f7d54e">
+                           <font>
+                              <Font name="Agency FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="ageFromTextField" layoutX="117.0" layoutY="15.0" style="-fx-background-color: #F7D54E;" text="FROM">
+                           <font>
+                              <Font name="Agency FB" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="ageToTextField" layoutX="252.0" layoutY="14.0" style="-fx-background-color: #F7D54E;" text="TO">
+                           <font>
+                              <Font name="Agency FB" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox fx:id="rightHbox6" prefHeight="55.0" prefWidth="375.0">
+               <children>
+                  <AnchorPane prefHeight="55.0" prefWidth="375.0">
+                     <children>
+                        <Label fx:id="salaryRangeLabel" alignment="CENTER" layoutY="16.0" prefHeight="24.0" prefWidth="109.0" text="SALARY RANGE" textAlignment="CENTER" textFill="#f7d54e">
+                           <font>
+                              <Font name="Agency FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="salaryFromTextField" layoutX="117.0" layoutY="15.0" style="-fx-background-color: #F7D54E;" text="FROM">
+                           <font>
+                              <Font name="Agency FB" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="salaryToTextField" layoutX="252.0" layoutY="14.0" style="-fx-background-color: #F7D54E;" text="TO">
+                           <font>
+                              <Font name="Agency FB" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox fx:id="rightHbox7" prefHeight="55.0" prefWidth="375.0">
+               <children>
+                  <AnchorPane prefHeight="55.0" prefWidth="375.0">
+                     <children>
+                        <Label fx:id="heightRangeLabel" alignment="CENTER" layoutY="16.0" prefHeight="24.0" prefWidth="109.0" text="HEIGHT RANGE" textAlignment="CENTER" textFill="#f7d54e">
+                           <font>
+                              <Font name="Agency FB" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="heightFromTextField" layoutX="117.0" layoutY="15.0" style="-fx-background-color: #F7D54E;" text="FROM">
+                           <font>
+                              <Font name="Agency FB" size="14.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="heightToTextField" layoutX="252.0" layoutY="14.0" style="-fx-background-color: #F7D54E;" text="TO">
+                           <font>
+                              <Font name="Agency FB" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox fx:id="rightBottomHbox" prefHeight="73.0" prefWidth="375.0">
+               <children>
+                  <AnchorPane prefHeight="73.0" prefWidth="375.0">
+                     <children>
+                        <Button fx:id="applyFiltersButton" layoutX="46.0" layoutY="14.0" mnemonicParsing="false" onAction="#applyFilters" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: #F7D54E;" text="APPLY FILTER">
+                           <font>
+                              <Font name="Agency FB" size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="resetFiltersButton" layoutX="216.0" layoutY="14.0" mnemonicParsing="false" onAction="#resetFilters" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: #F7D54E;" text="RESET FILTER">
+                           <font>
+                              <Font name="Agency FB" size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -47,13 +47,13 @@ public class FileOperations {
             player.setHeight(Double.parseDouble(tokens[3]));
             player.setClub(tokens[4]);
             player.setPosition(tokens[5]);
-            if(tokens[6] != "")
+            if(tokens[6] == "")
             {
-                player.setJerseyNum(Integer.parseInt(tokens[6]));                
+                player.setJerseyNum(-1);                               
             }
             else
             {
-                player.setJerseyNum(-1);
+                player.setJerseyNum(Integer.parseInt(tokens[6])); 
             }
             player.setWeeklySalary(Integer.parseInt(tokens[7]));
 

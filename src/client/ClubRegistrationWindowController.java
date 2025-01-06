@@ -83,7 +83,7 @@ public class ClubRegistrationWindowController {
     }
 
     public void setUserNameLabelText(String userName) {
-        this.username.setText(userName.toUpperCase());
+        this.username.setText(userName);
     }
 
     public void setClient(Client client) {

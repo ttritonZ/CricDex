@@ -14,6 +14,7 @@ import javafx.scene.layout.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.scene.control.Label;
 
 
 public class ClubHomeWindowController {

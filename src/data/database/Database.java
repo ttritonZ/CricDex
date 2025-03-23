@@ -39,15 +39,14 @@ public class Database {
     }
 
     public Player searchByName(String name) {
-        for (Player player : playerList) {
-            if (player.getName().equalsIgnoreCase(name)) {
-                return player;
-            }
+        for (int i = 0; i < this.playerList.size(); i++) {
+            Player p = this.playerList.get(i);
+            if (p.getName().equalsIgnoreCase(name)) return p;
         }
         return null;
     }
 
-    public List<Player> searchByCountryandClub(String country, String club) {
+    public List<Player> searchByCountryAndClub(String country, String club) {
         List<Player> searchResult = new ArrayList<>();
         for (Player player : playerList) {
             if ((player.getClub().equalsIgnoreCase(club) || club.equalsIgnoreCase("any"))
@@ -93,12 +92,12 @@ public class Database {
     public int addPlayer(Player player) {
         Player p = searchByName(player.getName());
         if (p == null) {
-            boolean b = checkClubValidity(player.getClub());
-            if (!b) 
-            {
-                return -1;
-            }
-            b = checkDuplicateJerseyNumber(player.getClub(), player.getJerseyNum());
+//            boolean b = checkClubValidity(player.getClub());
+//            if (!b)
+//            {
+//                return -1;
+//            }
+            boolean b = checkDuplicateJerseyNumber(player.getClub(), player.getJerseyNum());
             if (b)
             {
                 return -2;
@@ -146,10 +145,9 @@ public class Database {
     private void updateClubList(Player player) 
     {
         String club = player.getClub();
-        for (Club c: clubList) 
-        {
-            if (c.getName().equalsIgnoreCase(club)) 
-            {
+        for (int i = 0; i < this.clubList.size(); i++) {
+            Club c = this.clubList.get(i);
+            if (c.getName().equalsIgnoreCase(club)) {
                 c.addPlayer(player);
                 return;
             }
@@ -252,4 +250,6 @@ public class Database {
         Club club = searchClub(player.getClub());
         club.removePlayer(playerName);
     }
+
+
 }

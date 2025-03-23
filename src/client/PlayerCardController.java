@@ -10,8 +10,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Line;
 import javafx.stage.Modality;
@@ -37,12 +35,6 @@ public class PlayerCardController {
 
     @FXML
     private Button sellButton;
-
-    @FXML
-    private ImageView infoLogo;
-
-    @FXML
-    private ImageView sellLogo;
 
     @FXML
     private Line line;
@@ -150,6 +142,10 @@ public class PlayerCardController {
         nameLabel.setTextFill(javafx.scene.paint.Color.web(player.getPrimaryColor()));
         positionLabel.setText(player.getPosition());
         positionLabel.setTextFill(javafx.scene.paint.Color.web(player.getPrimaryColor()));
+        sellButton.setTextFill(javafx.scene.paint.Color.web(player.getSecondaryColor()));
+        sellButton.setStyle("-fx-background-color: " + player.getPrimaryColor() + ";");
+        infoButton.setTextFill(javafx.scene.paint.Color.web(player.getSecondaryColor()));
+        infoButton.setStyle("-fx-background-color: " + player.getPrimaryColor() + ";");
         if(player.getJerseyNum() != -1) {
             numberLabel.setText("#" + player.getJerseyNum());
         }
@@ -161,9 +157,9 @@ public class PlayerCardController {
         cardPane.setStyle("-fx-background-color: " + player.getSecondaryColor() + ";");
 
         if (player.isInTransferList()) {
-            sellLogo.setImage(new Image("/img/common/buyLogo.png"));
+            sellButton.setText("BUY");
         } else {
-            sellLogo.setImage(new Image("/img/common/sellLogo.png"));
+            sellButton.setText("SELL");
         }
     }
 

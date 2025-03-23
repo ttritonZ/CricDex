@@ -8,10 +8,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Region;
 
 public class PlayerListController {
+    @FXML
+    private AnchorPane anchorPane;
+
     @FXML
     private ScrollPane scrollPane;
 
@@ -24,7 +28,9 @@ public class PlayerListController {
         try {
             int row = 0;
             int col = 0;
-            scrollPane.setStyle("-fx-background-color: transparent;");
+            scrollPane.setStyle("-fx-background-color:" + clubHomeWindowController.getClub().getPrimaryColor() + ";");
+            gridPane.setStyle("-fx-background-color:" + clubHomeWindowController.getClub().getPrimaryColor() + ";");
+            anchorPane.setStyle("-fx-background-color:" + clubHomeWindowController.getClub().getPrimaryColor() + ";");
             for (Player player : playerList) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
                 fxmlLoader.setLocation(getClass().getResource("/ui/playerCard.fxml"));

@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="buyPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="123.0" prefWidth="503.0" style="-fx-background-color: #F7D54E;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.BuyConfirmWindowController">
+<AnchorPane fx:id="buyPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="123.0" prefWidth="503.0" style="-fx-background-color: #F7D54E;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.BuyConfirmationWindowController">
    <children>
       <Label fx:id="nameLabel" layoutX="23.0" layoutY="9.0" prefHeight="48.0" prefWidth="300.0" text="Rassie van der Dussen" textFill="#3a225d">
          <font>

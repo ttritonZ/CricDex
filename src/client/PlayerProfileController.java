@@ -34,7 +34,7 @@ public class PlayerProfileController implements Initializable{
     private Label numberLabel;
 
     @FXML
-    private Label clubLable;
+    private Label clubLabel;
 
     @FXML
     private Label countryLabel;
@@ -74,8 +74,8 @@ public class PlayerProfileController implements Initializable{
         nameLabel.setTextFill(javafx.scene.paint.Color.web(player.getSecondaryColor()));
         positionLabel.setText(player.getPosition().toUpperCase());
         positionLabel.setTextFill(javafx.scene.paint.Color.web(player.getSecondaryColor()));
-        clubLable.setText(player.getClub().toUpperCase());
-        clubLable.setTextFill(javafx.scene.paint.Color.web(player.getSecondaryColor()));
+        clubLabel.setText(player.getClub().toUpperCase());
+        clubLabel.setTextFill(javafx.scene.paint.Color.web(player.getSecondaryColor()));
         if(player.getJerseyNum() != -1)
         {
             numberLabel.setText("#"+player.getJerseyNum());
@@ -87,12 +87,15 @@ public class PlayerProfileController implements Initializable{
         numberLabel.setTextFill(javafx.scene.paint.Color.web(player.getSecondaryColor()));
         ageLabel.setText(player.getAge() + " YEARS");
         ageLabel.setTextFill(javafx.scene.paint.Color.web(player.getSecondaryColor()));
+        ageText.setTextFill(javafx.scene.paint.Color.web(player.getSecondaryColor()));
         countryLabel.setText(player.getCountry().toUpperCase());
         countryLabel.setTextFill(javafx.scene.paint.Color.web(player.getSecondaryColor()));
         salaryLabel.setText("$" + player.getWeeklySalary());
         salaryLabel.setTextFill(javafx.scene.paint.Color.web(player.getSecondaryColor()));
-        heightLabel.setText(player.getHeight() + "METERS");
+        salaryText.setTextFill(javafx.scene.paint.Color.web(player.getSecondaryColor()));
+        heightLabel.setText(player.getHeight() + " METERS");
         heightLabel.setTextFill(javafx.scene.paint.Color.web(player.getSecondaryColor()));
+        heightText.setTextFill(javafx.scene.paint.Color.web(player.getSecondaryColor()));
         line.setStyle("-fx-stroke: " + player.getSecondaryColor() + ";");
         imageVbox.setStyle("-fx-background-color: " + player.getSecondaryColor() + ";");
         

@@ -126,15 +126,19 @@ public class Club implements Serializable {
         return playerList;
     }
 
-    public double getTotalYearlySalary() {
+    public long getTotalYearlySalary() {
         long sum = 0;
         for (Player player : players) {
-            sum += 52 * player.getWeeklySalary();
+            sum += 52L * player.getWeeklySalary();
         }
         return sum;
     }
 
     public boolean checkNumber(int jerseyNum) {
+        if(jerseyNum == -1)
+        {
+            return false;
+        }
         for (Player player : players) {
             if (player.getJerseyNum() == jerseyNum) {
                 return true;

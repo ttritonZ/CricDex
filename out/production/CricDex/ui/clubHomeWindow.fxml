@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.TreeView?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ClubHomeWindowController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ClubHomeWindowController">
    <children>
       <VBox fx:id="leftVbox" prefHeight="688.0" prefWidth="350.0">
          <children>
@@ -30,7 +20,7 @@
                      </children>
                   </AnchorPane>
                </children></HBox>
-            <HBox fx:id="leftBottonHbox" layoutY="50.0" prefHeight="589.0" prefWidth="350.0" style="-fx-background-color: #3A225D;">
+            <HBox fx:id="leftBottomHbox" layoutY="50.0" prefHeight="589.0" prefWidth="350.0" style="-fx-background-color: #3A225D;">
                <children>
                   <AnchorPane prefHeight="589.0" prefWidth="350.0">
                      <children>
@@ -38,7 +28,7 @@
                            <image>
                               <Image url="@../img/logos/Kolkata_Knight_Riders.png" />
                            </image></ImageView>
-                        <Label fx:id="slogan" alignment="CENTER" layoutX="1.0" layoutY="336.0" prefHeight="100.0" prefWidth="350.0" text="#SLOGAN" textFill="#f7d54e">
+                        <Label fx:id="slogan" alignment="CENTER" layoutX="1.0" layoutY="365.0" prefHeight="100.0" prefWidth="350.0" text="#SLOGAN" textFill="#f7d54e">
                            <font>
                               <Font name="Agency FB Bold" size="38.0" />
                            </font>
@@ -48,16 +38,6 @@
                               <Font name="Agency FB" size="29.0" />
                            </font>
                         </Button>
-                        <Label fx:id="budgetLabel" alignment="CENTER" layoutY="433.0" prefHeight="45.0" prefWidth="188.0" text="REMANING BUDGET :" textFill="#f7d54e" visible="false">
-                           <font>
-                              <Font name="Agency FB" size="22.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="budgetValueLabel" layoutX="201.0" layoutY="433.0" prefHeight="45.0" prefWidth="150.0" text="\$50,000,000" textFill="#f7d54e" visible="false">
-                           <font>
-                              <Font name="Agency FB" size="22.0" />
-                           </font>
-                        </Label>
                      </children>
                   </AnchorPane>
                </children>
@@ -76,11 +56,11 @@
                </children>
             </HBox>
             <HBox fx:id="playerListHbox" prefHeight="488.0" prefWidth="641.0" style="-fx-background-color: #3A225D;" />
-            <HBox fx:id="midBottomHbox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox fx:id="midBottomHbox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #F7D54E;">
                <children>
-                  <AnchorPane prefHeight="100.0" prefWidth="641.0" style="-fx-background-color: #F7D54E;">
+                  <AnchorPane prefHeight="100.0" prefWidth="641.0">
                      <children>
-                        <TextField fx:id="searchByNameTextField" layoutX="41.0" layoutY="28.0" opacity="0.75" prefHeight="45.0" prefWidth="300.0" text="SEARCH PLAYERS BY NAME">
+                        <TextField fx:id="searchByNameTextField" layoutX="41.0" layoutY="28.0" prefHeight="45.0" prefWidth="300.0" promptText="SEARCH PLAYERS BY NAME">
                            <font>
                               <Font name="Agency FB" size="18.0" />
                            </font>
@@ -176,12 +156,12 @@
                               <Font name="Agency FB" size="20.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="ageFromTextField" layoutX="117.0" layoutY="15.0" style="-fx-background-color: #F7D54E;" text="FROM">
+                        <TextField fx:id="ageFromTextField" layoutX="117.0" layoutY="15.0" promptText="FROM" style="-fx-background-color: #F7D54E;">
                            <font>
                               <Font name="Agency FB" size="14.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="ageToTextField" layoutX="252.0" layoutY="14.0" style="-fx-background-color: #F7D54E;" text="TO">
+                        <TextField fx:id="ageToTextField" layoutX="252.0" layoutY="14.0" promptText="TO" style="-fx-background-color: #F7D54E;">
                            <font>
                               <Font name="Agency FB" size="14.0" />
                            </font>
@@ -199,12 +179,12 @@
                               <Font name="Agency FB" size="20.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="salaryFromTextField" layoutX="117.0" layoutY="15.0" style="-fx-background-color: #F7D54E;" text="FROM">
+                        <TextField fx:id="salaryFromTextField" layoutX="117.0" layoutY="15.0" promptText="FROM" style="-fx-background-color: #F7D54E;">
                            <font>
                               <Font name="Agency FB" size="14.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="salaryToTextField" layoutX="252.0" layoutY="14.0" style="-fx-background-color: #F7D54E;" text="TO">
+                        <TextField fx:id="salaryToTextField" layoutX="252.0" layoutY="14.0" promptText="TO" style="-fx-background-color: #F7D54E;">
                            <font>
                               <Font name="Agency FB" size="14.0" />
                            </font>
@@ -222,12 +202,12 @@
                               <Font name="Agency FB" size="20.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="heightFromTextField" layoutX="117.0" layoutY="15.0" style="-fx-background-color: #F7D54E;" text="FROM">
+                        <TextField fx:id="heightFromTextField" layoutX="117.0" layoutY="15.0" promptText="FROM" style="-fx-background-color: #F7D54E;">
                            <font>
                               <Font name="Agency FB" size="14.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="heightToTextField" layoutX="252.0" layoutY="14.0" style="-fx-background-color: #F7D54E;" text="TO">
+                        <TextField fx:id="heightToTextField" layoutX="252.0" layoutY="14.0" promptText="TO" style="-fx-background-color: #F7D54E;">
                            <font>
                               <Font name="Agency FB" size="14.0" />
                            </font>

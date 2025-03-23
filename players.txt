@@ -17,7 +17,7 @@ Yuzvendra Chahal,India,33,1.70,Rajasthan Royals,Bowler,3,15000000
 Cameron Green,Australia,25,1.93,Mumbai Indians,Allrounder,25,21000000
 Nicholas Pooran,West Indies,29,1.83,Lucknow Super Giants,Wicketkeeper,,16500000
 Hardik Pandya,India,30,1.83,Gujarat Titans,Allrounder,33,18500000
-Faf du Plessis,South Africa,40,1.78,Royal Challengers Bangalore,Batsman,18,17500000
+Faf du Plessis,South Africa,40,1.78,Royal Challengers Bangalore,Batsman,13,17500000
 Pat Cummins,Australia,31,1.92,Kolkata Knight Riders,Bowler,30,17500000
 Sanju Samson,India,30,1.79,Rajasthan Royals,Wicketkeeper,9,17000000
 Marcus Stoinis,Australia,35,1.85,Lucknow Super Giants,Allrounder,17,17500000
@@ -30,7 +30,7 @@ Kane Williamson,New Zealand,34,1.83,Gujarat Titans,Batsman,22,16000000
 Shikhar Dhawan,India,38,1.80,Punjab Kings,Batsman,42,17000000
 Kagiso Rabada,South Africa,29,1.91,Punjab Kings,Bowler,,19000000
 Axar Patel,India,30,1.83,Delhi Capitals,Allrounder,20,17500000
-Mitchell Marsh,Australia,33,1.91,Delhi Capitals,Allrounder,31,18000000
+Mitchell Marsh,Australia,33,1.91,Delhi Capitals,Allrounder,8,18000000
 Dinesh Karthik,India,39,1.70,Royal Challengers Bangalore,Wicketkeeper,21,16000000
 Ruturaj Gaikwad,India,27,1.78,Chennai Super Kings,Batsman,31,15000000
 Bhuvneshwar Kumar,India,34,1.78,Sunrisers Hyderabad,Bowler,15,14000000

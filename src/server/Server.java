@@ -54,6 +54,10 @@ public class Server {
         db = new Database();
         fileOperations = new FileOperations();
         fileOperations.readFromFile(db);
+        for (Player player : db.getPlayerList())
+        {
+            System.out.println(player);
+        }
     }
 
     private void serve(Socket socket) throws IOException {

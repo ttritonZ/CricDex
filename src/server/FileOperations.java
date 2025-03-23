@@ -5,6 +5,7 @@ import data.database.Player;
 
 import java.io.*;
 import java.util.List;
+import java.util.Objects;
 
 public class FileOperations {
     private String inputFileName;
@@ -47,7 +48,7 @@ public class FileOperations {
             player.setHeight(Double.parseDouble(tokens[3]));
             player.setClub(tokens[4]);
             player.setPosition(tokens[5]);
-            if(tokens[6] == "")
+            if(Objects.equals(tokens[6], ""))
             {
                 player.setJerseyNum(-1);                               
             }
@@ -58,6 +59,7 @@ public class FileOperations {
             player.setWeeklySalary(Integer.parseInt(tokens[7]));
 
             int check = db.addPlayer(player);
+            System.out.println(check);
         }
         br.close();
     }

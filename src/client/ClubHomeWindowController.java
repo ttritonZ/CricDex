@@ -140,12 +140,6 @@ public class ClubHomeWindowController {
     private Button resetFiltersButton;
 
     @FXML
-    private Label budgetLabel;
-
-    @FXML
-    private Label budgetValueLabel;
-
-    @FXML
     private Label refreshLabel;
 
     @FXML
@@ -185,14 +179,11 @@ public class ClubHomeWindowController {
             client.startRefreshThread(this);
             refreshChoiceBox.setVisible(true);
             refreshLabel.setVisible(true);
-            budgetLabel.setVisible(true);
-            budgetValueLabel.setVisible(true);
             buyPlayerButton.setText("HOME");
         } else {
             client.interruptRefreshThread();
             refreshChoiceBox.setVisible(false);
             refreshLabel.setVisible(false);
-            budgetLabel.setVisible(false);
             buyPlayerButton.setText("BUY PLAYERS");
             loadPlayerCards(this.club.getPlayers());
         }
@@ -416,8 +407,6 @@ public class ClubHomeWindowController {
         slogan.setTextFill(javafx.scene.paint.Color.web(this.club.getSecondaryColor()));
         buyPlayerButton.setStyle("-fx-background-color: " + club.getSecondaryColor());
         buyPlayerButton.setTextFill(javafx.scene.paint.Color.web(club.getPrimaryColor()));
-        budgetLabel.setTextFill(javafx.scene.paint.Color.web(club.getSecondaryColor()));
-        budgetValueLabel.setTextFill(javafx.scene.paint.Color.web(club.getSecondaryColor()));
         leftTopHbox.setStyle("-fx-background-color: " + club.getSecondaryColor());
         leftBottomHbox.setStyle("-fx-background-color: " + club.getPrimaryColor());
         midTopHbox.setStyle("-fx-background-color: " + club.getPrimaryColor());
@@ -520,6 +509,10 @@ public class ClubHomeWindowController {
 
     public int getRefreshRate() {
         return refreshRate;
+    }
+
+    public Club getClub() {
+        return club;
     }
 
     @FXML
